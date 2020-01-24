@@ -1,7 +1,7 @@
 {
-  "name": "myexptress-app",
+  "name": "booklibrary",
   "version": "0.0.1",
-  "description": "my app for smarturp",
+  "description": "an express js app the manages books in a library",
   "main": "express.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
