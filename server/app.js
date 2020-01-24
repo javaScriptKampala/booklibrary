@@ -1,4 +1,5 @@
 import express from 'express';
+import appRouter from './router';
 
 // initiate express
 const app = express();
@@ -10,6 +11,8 @@ app.get("/", (req, res) => {
         message: "Helo world"
     })
 })
+
+app.use("/api", appRouter);
 
 app.listen(5000, () => {
     console.log("listening on PORT 5000")
