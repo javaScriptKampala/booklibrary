@@ -1,5 +1,8 @@
 import express from 'express';
 import appRouter from './router';
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 // initiate express
 const app = express();
@@ -12,8 +15,10 @@ app.get("/", (req, res) => {
     })
 })
 
+const PORT = process.env.PORT;
+
 app.use("/api", appRouter);
 
-app.listen(5000, () => {
-    console.log("listening on PORT 5000")
+app.listen(PORT, () => {
+    console.log(`listening on PORT ${PORT}`)
 })
